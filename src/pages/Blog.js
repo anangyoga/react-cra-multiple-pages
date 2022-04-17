@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Blog() {
   const [articles, setArticles] = useState([]);
@@ -22,7 +23,12 @@ function Blog() {
       {!loading && (
         <div>
           {articles.map((article) => (
-            <article key={article.id}>{article.title}</article>
+            <article key={article.id}>
+              <h2>
+                <Link to={`/blog/${article.id}`}>{article.title}</Link>
+              </h2>
+              <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
+            </article>
           ))}
         </div>
       )}
