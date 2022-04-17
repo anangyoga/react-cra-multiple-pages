@@ -2,9 +2,9 @@ import React from "react";
 
 function Contact() {
   return (
-    <section>
-      <p>Contact Me</p>
-      <ul>
+    <section className="section">
+      <p className="section-title">Contact Me</p>
+      <ul className="section-description">
         <li>WA: 0909090</li>
         <li>Email: dask@gask.com</li>
       </ul>
