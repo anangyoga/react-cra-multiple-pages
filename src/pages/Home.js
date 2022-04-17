@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Home";
+  }, []);
   return (
     <section className="section">
       <h1 className="section-title">Welcome to Homepage</h1>

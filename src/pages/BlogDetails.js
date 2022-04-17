@@ -17,6 +17,7 @@ function BlogDetails() {
 
       const response = await request.json();
 
+      document.title = response.title;
       setArticle(response);
       setLoading(false);
       console.log(response);
