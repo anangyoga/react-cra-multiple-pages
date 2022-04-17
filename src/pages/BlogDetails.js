@@ -28,16 +28,16 @@ function BlogDetails() {
     return <h1>404 Not Found</h1>;
   }
   return (
-    <section>
+    <section className="section">
       {loading ? (
         <i>Loading article ...</i>
       ) : (
-        <article>
-          <h1>{article.title}</h1>
-          <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
-          <img src={article.imageUrl} alt="" />
-          <p>{article.summary}</p>
-          <p>
+        <article className="article">
+          <h1 className="article-title">{article.title}</h1>
+          <time className="article-time">{new Date(article.publishedAt).toLocaleDateString()}</time>
+          <img src={article.imageUrl} alt="" className="article-image" />
+          <p className="article-summary">{article.summary}</p>
+          <p className="article-source">
             <i>source:</i>{" "}
             <a href={article.url} target="_blank" rel="noreferrer">
               {article.newsSite}

@@ -16,18 +16,18 @@ function Blog() {
     getArticles();
   }, []);
   return (
-    <section>
-      <h1>Blog</h1>
-      <p>Ini tulisan-tulisanku, tolong dibaca ya!</p>
+    <section className="section">
+      <h1 className="section-title">Blog</h1>
+      <p className="section-description">Ini tulisan-tulisanku, tolong dibaca ya!</p>
       {loading && <i>Loading articles ...</i>}
       {!loading && (
-        <div>
+        <div className="articles">
           {articles.map((article) => (
-            <article key={article.id}>
-              <h2>
+            <article key={article.id} className="article">
+              <h2 className="article-title">
                 <Link to={`/blog/${article.id}`}>{article.title}</Link>
               </h2>
-              <time>{new Date(article.publishedAt).toLocaleDateString()}</time>
+              <time className="article-time">{new Date(article.publishedAt).toLocaleDateString()}</time>
             </article>
           ))}
         </div>
